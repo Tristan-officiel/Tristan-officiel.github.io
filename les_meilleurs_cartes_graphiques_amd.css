@@ -1,0 +1,29 @@
+body{
+	background-image: url(wp8574860-red-matrix-wallpapers.png) ;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	color: darkred;
+}
+
+header{
+	background-color: black; 
+  padding: 10px 100px;
+  margin-left: -100px;
+  margin-top: -10px;
+  color: white;
+  text-align: center; 
+  font-size: 10px; 
+  font-weight: bold;
+  position: fixed;
+  width: 100%; 
+}
+
+h1{
+	text-align: center;
+
+}
+
+a{
+	text-align: center;
+	background-color: white;
+}
