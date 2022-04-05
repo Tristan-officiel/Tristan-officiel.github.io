@@ -8,6 +8,7 @@ html {
 
 body{
 	max-width: 1980px;
+	min-width:1200px;
 	transform-origin: 00;
 	scroll-behavior: smooth;
 	background-image: url(wp2726662-matrix-background-1920x1080-hd.jpg) ;
