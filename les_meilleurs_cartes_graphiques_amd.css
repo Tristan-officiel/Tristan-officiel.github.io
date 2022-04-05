@@ -7,7 +7,8 @@ html {
 
 
 body{
-	min-width: 1980px;
+	max-width: 1980px;
+	min-width:1980px;
 	transform-origin: 00;
 	scroll-behavior: smooth;
 	background-image: url(wp8574860-red-matrix-wallpapers.png) ;
