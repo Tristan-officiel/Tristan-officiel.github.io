@@ -14,7 +14,6 @@ body{
 	background-image: url(papers.co-nm93-matrix-minimal-coding-screen-computer-bw-dark-3840x2400.jpg) ;
 	background-size: 155%;
 	background-position: center;
-	background-repeat: no-repeat;
 	background-attachment: fixed;
 	color:  rgba(255, 255, 255, 1);
 	font-family: Cyber;
@@ -69,7 +68,7 @@ h1:not(.banner){
 }
 
 
-h2:hover:not(.vide){
+h2:hover{
 	color: black;
 	background-color: rgba(255, 255, 255, 0.8);
 }
