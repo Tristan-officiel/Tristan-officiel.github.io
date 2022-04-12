@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="quiz.css">
+	<link rel="icon" href="Capture-modified.ico" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Le QUIZ des cartes graphiques</title>
+</head>
+<body>
+	<center><header>
+	<button class="button_sidebarre" id="side_button" onclick="sidebarre_open()">☰</button>
+	<button class="button_sidebarre" id="button_close_sidebarre" onclick="sidebarre_close()"  style="visibility:hidden;">✖</button> 
+	<h1 class="banner"> <a  href="quiz.html">Le QUIZ des cartes graphiques</a></h1>
+	
+	</header></center>
+	
+	
+
+	<div id="sidebarre" style="visibility: hidden;">
+	<br/>
+	<a href="quiz.html"> Accueil </a><br/>
+	<br/>
+	<br/>
+	<a href="#général_repère" onclick="sidebarre_close()"> Questions générales </a><br/>
+	<br/>
+	<a href="#nvidia_repère" onclick="sidebarre_close()"> Questions NVIDIA</a><br/>
+	<br/>
+	<a href="#amd_repère" onclick="sidebarre_close()"> Questions AMD </a><br/>
+	<br/>
+	<a href="#intel_repère" onclick="sidebarre_close()"> Questions INTEL </a><br/>
+	<br/>
+	<br/><br/>
+	<br/>
+	<a href="index.html"> L'univers des cartes graphiques</a><br/>
+	<br/>
+	<a href="les_meilleurs_cartes_graphiques_nvidia.html"> Les cartes graphiques <span class="vert">NVIDIA</span></a><br/>
+	<br/>
+	<a href="les_meilleurs_cartes_graphiques_intel.html"> Les cartes graphiques <span class="bleu">INTEL</span></a>  <br/>
+	<br/>
+	<a href="les_meilleurs_cartes_graphiques_amd.html"> Les cartes graphiques <span class="rouge">AMD</span></a><br/>
+	
+	</div>
+
+	
+
+	<script type="text/javascript">
+		function sidebarre_open() {
+  		document.getElementById("sidebarre").style.visibility = "visible";
+  		document.getElementById("button_close_sidebarre").style.visibility = "visible";
+  		document.getElementById("side_button").style.visibility = "hidden";
+		}
+		function sidebarre_close() {
+  		document.getElementById("sidebarre").style.visibility = "hidden";
+  		document.getElementById("button_close_sidebarre").style.visibility = "hidden";
+		document.getElementById("side_button").style.visibility = "visible";
+		}
+	</script>
+
+
+	
+	<br/>
+	<p id="nom">votre nom : <input type="text" id="entrée_nom" name="entrée_nom"></p>
+	<span id="général_repère"></span>
+	<br/>
+	<br/>
+	<h1 id="général"> Questions générales </h1>
+	<p> Quels éléments sont présents dans une carte graphique ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Un processeur	<input type="checkbox" id="choix_processeur" name="choix_processeur" value="processeur"><br/>
+		Un frigo	<input type="checkbox" id="choix_frigo" name="choix_frigo" value="frigo"><br/>
+		Un Bios		<input type="checkbox" id="choix_bios" name="choix_bios" value="bios"><br/>
+		Une VRAM	<input type="checkbox" id="choix_vram" name="choix_vram" value="vram"><br/>
+		Une mangue <input type="checkbox" id="choix_mangue" name="choix_mangue" value="mangue"></div>
+
+	<br/>
+	 <p>De quoi son actuellement responsables les cartes graphiques?</p><br/>
+		<br/>
+		<div class="Questions">
+		L'arrivée du père noël <input type="radio"  name="choix_question_2" value="noël"><br/>
+		La crise du covid 19 <input type="radio" name="choix_question_2" value="covid"><br/>
+		Beaucoup de pollution <input type="radio" id="choix_question_2"name="choix_question_2" value="pollution"><br/>
+		La claque de Will Smith aux Oscars <input type="radio" name="choix_question_2" value="will"></div>
+
+		<br/>
+	<p> A quoi peuvent servir les ventilateurs sur les gpu ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Hacher de la viande pour faire des lasagnes <input type="radio" name="choix_question_3" value="lasagne"><br/>
+		Refroidir les joueurs qui ont chaud en été<input type="radio" name="choix_question_3" value="été"><br/>
+		Refroidir la puce graphique <input type="radio" id="choix_question_3" name="choix_question_3" value="refroidissement_puce_graphique"><br/>
+		Juste pour le style <input type="radio" name="choix_question_3" value="style"></div>
+
+
+
+
+	<span id="nvidia_repère"></span>
+	<h1 id="nvidia"> Questions NVIDIA</h1>
+
+		<p>Combien de séries RTX sont sorties?</p> <br/>
+		<br/>
+	<div class="Questions">
+		<input type="number" id="question_rtx" name="question_rtx">
+	</div>
+
+	<p> A quoi sert le Ray-Tracing ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Avoir un jeu très beau	<input type="checkbox" id="jeu_beau" name="jeu_beau" value="jeu_beau"><br/>
+		Overclocker sa carte graphique	<input type="checkbox" id="overclock" name="overclock" value="overclock"><br/>
+		Montrer que le jeu-vidéo est un art	<input type="checkbox" id="art" name="art" value="art"><br/>
+		Ajouter des effets de lumière	<input type="checkbox" id="lumière" name="choix_vram" value="lumière"><br/>
+		Commander des pizzas <input type="checkbox" id="pizzas" name="pizzas" value="pizzas"></div>
+	<br/>
+
+	<p> Quel est l'avantage du DLSS ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Il permet d'obtenir de meilleurs graphismes <input type="radio" name="choix_question_4" value="graphismes"><br/>
+		Il permet d'obtenir de meilleures performances<input type="radio" id="choix_question_4" name="choix_question_4" value="performances"><br/>
+		Il permet d'écrire des pages html <input type="radio" name="choix_question_4" value="html"><br/>
+		Il permet de rouler sans permis <input type="radio" name="choix_question_4" value="permis"></div>
+
+	<span id="amd_repère"></span>
+	<h1 id="amd"> Questions AMD</h1>
+
+	<p> Avec les GPU, quelles est l'autre production majeure d'AMD ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Les cartes mères <input type="radio" name="choix_question_5" value="carte_mères"><br/>
+		Les ventilateurs<input type="radio" name="choix_question_5" value="ventilateurs"><br/>
+		Les frigidaires <input type="radio" name="choix_question_5" value="frigidaires"><br/>
+		Les processeurs <input type="radio" id="choix_question_5" name="choix_question_5" value="processeurs"></div>
+	
+	<p> Quels sont les points forts du FSR ?</p><br/>
+		<br/>
+		<div class="Questions">
+		On a de meilleurs performances	<input type="checkbox" id="meilleures_performances" name="meilleures_performances" value="meilleures_performances"><br/>
+		Il fonctionne sur tout les gpu	<input type="checkbox" id="all_gpu" name="all_gpu" value="all_gpu"><br/>
+		Il n'as pas besoin de tensor cores	<input type="checkbox" id="tensor_cores" name="tensor_cores" value="tensor_cores"><br/>
+		Il est amélioré constamment, comme le prouve sa version 2.0	<input type="checkbox" id="upgrade" name="upgrade" value="upgrade"></div>
+
+	<p> Quelle est la couleur d'AMD ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Rouge, comme le sont les petit pois <input type="radio" id="choix_question_7" name="choix_question_7" value="rouge"><br/>
+		Noir, parce que c'est classe <input type="radio" name="choix_question_7" value="noir"><br/>
+		Vert, pour narguer NVIDIA <input type="radio" name="choix_question_7" value="vert"><br/>
+		Bleu, pour marquer la concurrence avec Intel <input type="radio" name="choix_question_7" value="bleu"></div>
+
+	<span id="intel_repère"></span>
+	<h1 id="intel"> Questions INTEL</h1>
+
+		<p> Quelle est le nom de la première série de gpu INTEL ?</p><br/>
+		<br/>
+		<div class="Questions">
+		<input type="text" id="question_intel" name="nom_série_intel"></div>
+
+<p> Quels sont les objectifs de deep link ?</p><br/>
+		<br/>
+		<div class="Questions">
+		De meilleurs performances	<input type="checkbox" id="meilleures_performances_intel" name="meilleures_performances_intel" value="meilleures_performances_intel"><br/>
+		L'économie d'énergie	<input type="checkbox" id="économie" name="économie" value="économie"><br/>
+		Une meilleure gestion CPU/GPU	<input type="checkbox" id="gestion" name="gestion" value="gestion"><br/>
+		Trandformer un écran 1080p en écran 8K<input type="checkbox" id="résolution" name="résolution" value="résolution"></div>
+		<br/>
+	<br/>
+
+<p> Quelle élément exclusif est pris en charge par les GPU arc ?</p><br/>
+		<br/>
+		<div id="question_10" class="Questions">
+		VP9, un format d'encodage vidéo <input type="radio" name="choix_question_10" value="vp9"><br/>
+		IPV4, pour booster son ip <input type="radio" name="choix_question_10" value="ipv4"><br/>
+		mp3, pour écouter de la musique avec son gpu <input type="radio" name="choix_question_10" value="mp3"><br/>
+		AV1, le dernier format moderne d'encodage vidéo sur internet <input type="radio" id="choix_question_10" name="choix_question_10" value="av1"></div>
+		<br/>
+
+
+<h1 id="button_valid" onclick="validation()"> Valider </h1>
+<br/>
+<br/>	
+
+<script type="text/javascript">
+	function validation() {
+		var bonne_réponse=0;
+		var nombre_questions=12;
+		var nom=document.getElementById('entrée_nom').value;
+		if ((document.getElementById('choix_processeur').checked) && 
+			(document.getElementById('choix_frigo').checked==false)&&
+			(document.getElementById('choix_bios').checked)&&
+			(document.getElementById('choix_vram').checked)&&
+			(document.getElementById('choix_mangue').checked==false)){
+			bonne_réponse+=1;}
+
+		if ((document.getElementById('jeu_beau').checked) && 
+			(document.getElementById('overclock').checked==false)&&
+			(document.getElementById('art').checked==false)&&
+			(document.getElementById('lumière').checked)&&
+			(document.getElementById('pizzas').checked==false)){
+			bonne_réponse+=1;}
+
+		if ((document.getElementById('meilleures_performances').checked) && 
+			(document.getElementById('all_gpu').checked)&&
+			(document.getElementById('tensor_cores').checked)&&
+			(document.getElementById('upgrade').checked)){
+			bonne_réponse+=1;}
+
+		if ((document.getElementById('meilleures_performances_intel').checked) && 
+			(document.getElementById('économie').checked)&&
+			(document.getElementById('gestion').checked)&&
+			(document.getElementById('résolution').checked==false)){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('question_rtx').value==2)
+			{bonne_réponse+=1;}
+
+		if ((document.getElementById('question_intel').value=="arc")||
+			(document.getElementById('question_intel').value=="Arc")||
+			(document.getElementById('question_intel').value=="ARC")){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_2').checked){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_3').checked){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_4').checked){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_5').checked){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_7').checked){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_10').checked){
+			bonne_réponse+=1;}
+
+		var score= (bonne_réponse*100)/nombre_questions;
+
+		alert("Bravo " + nom+ " ! " +"vous avez un score de "+score+ " % !");}
+
+
+		
+
+		
+		
+</script>
+
+	<center><footer> by Tristan Perrot© 2022 </footer></center>
+
+	
+
+</body>
+</html>
