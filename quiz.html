@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="quiz.css">
+	<link rel="icon" href="Capture-modified.ico" /><!-- on importe l'icone de la page-->
+	<meta charset="utf-8">
+	
+	<title> Le QUIZ des cartes graphiques</title><!-- titre de la page-->
+</head>
+<body>
+	<center><header><!-- en tête de la page-->
+	<button class="button_sidebarre" id="side_button" onclick="sidebarre_open()">☰</button><!-- boutton d'ouverture du menu de navigation-->
+	<button class="button_sidebarre" id="button_close_sidebarre" onclick="sidebarre_close()"  style="visibility:hidden;">✖</button> <!-- boutton de fermeture du menu de navigation-->
+	<h1 class="banner"> <a  href="quiz.html">Le QUIZ des cartes graphiques</a></h1><!-- titre principale de la page, placé dans la bannière-->
+	</header></center>
+	
+	
+
+	<div id="sidebarre" style="visibility: hidden;"><!--barre de navigation (cachée par défaut) -->
+	<br/>
+	<a href="quiz.html"> Accueil </a> <!--permet de revenir à l'accueil de la page--><br/>
+	<br/>
+	<br/><!-- liens vers le sections de la page, on remarque que lorsque l'on click sur un lien, le menu de navigation se ferme automatiquement grâce à la fonction sidebarre_close()-->
+	<a href="#général_repère" onclick="sidebarre_close()"> Questions générales </a><br/>
+	<br/>
+	<a href="#nvidia_repère" onclick="sidebarre_close()"> Questions NVIDIA</a><br/>
+	<br/>
+	<a href="#amd_repère" onclick="sidebarre_close()"> Questions AMD </a><br/>
+	<br/>
+	<a href="#intel_repère" onclick="sidebarre_close()"> Questions INTEL </a><br/>
+	<br/>
+	<br/><br/>
+	<br/><!-- liens vers les autres pages du site-->
+	<a href="index.html"> L'univers des cartes graphiques</a><br/>
+	<br/>
+	<a href="les_meilleurs_cartes_graphiques_nvidia.html"> Les cartes graphiques <span class="vert">NVIDIA</span></a><br/>
+	<br/>
+	<a href="les_meilleurs_cartes_graphiques_intel.html"> Les cartes graphiques <span class="bleu">INTEL</span></a>  <br/>
+	<br/>
+	<a href="les_meilleurs_cartes_graphiques_amd.html"> Les cartes graphiques <span class="rouge">AMD</span></a><br/>
+	
+	</div>
+
+	
+	<!-- fonctions javascript qui permettent d'ouvrir le menu de navigation ou de le fermer
+		en affichant le menu, cachant le bouton (3 lignes) et affichant la croix
+		ou en rendant invisible le menu, idem pour la croix et en affichant le bouton
+		(avec les 3 lignes). On joue ici avec le paramètre visible/invisible des éléments -->
+	<script type="text/javascript">
+		function sidebarre_open() {
+  		document.getElementById("sidebarre").style.visibility = "visible";
+  		document.getElementById("button_close_sidebarre").style.visibility = "visible";
+  		document.getElementById("side_button").style.visibility = "hidden";
+		}
+		function sidebarre_close() {
+  		document.getElementById("sidebarre").style.visibility = "hidden";
+  		document.getElementById("button_close_sidebarre").style.visibility = "hidden";
+		document.getElementById("side_button").style.visibility = "visible";
+		}
+	</script>
+
+
+	
+	<br/><!-- input où l'utilisateur rentre son nom-->
+	<p id="nom">votre nom : <input type="text" id="entrée_nom" name="entrée_nom"></p>
+	<span id="général_repère"></span>
+	<br/>
+	<br/>
+	<h1 id="général"> Questions générales </h1><!-- titre d'une section de questions-->
+	<p> Quels éléments sont présents dans une carte graphique ?</p><br/><!-- titre de la question-->
+		<br/>
+		<div class="Questions"><!-- checkbox avec ID uniques pour vérifier ensuite le résultat de la question-->
+		Un processeur	<input type="checkbox" id="choix_processeur" name="choix_processeur" ><br/>
+		Un frigo	<input type="checkbox" id="choix_frigo" name="choix_frigo"><br/>
+		Un Bios		<input type="checkbox" id="choix_bios" name="choix_bios"><br/>
+		Une VRAM	<input type="checkbox" id="choix_vram" name="choix_vram"><br/>
+		Une mangue <input type="checkbox" id="choix_mangue" name="choix_mangue"></div>
+
+	<br/>
+	 <p>De quoi son actuellement responsables les cartes graphiques?</p><br/>
+		<br/>
+		<div class="Questions"><!-- même chose ici, sauf que l'on a des boutons radio, ce qui ne laisse qu'une possibilité de réponse à l'utilisateur-->
+		L'arrivée du père noël <input type="radio"  name="choix_question_2"><br/>
+		La crise du covid 19 <input type="radio" name="choix_question_2"><br/>
+		Beaucoup de pollution <input type="radio" id="choix_question_2"name="choix_question_2"><br/>
+		La claque de Will Smith aux Oscars <input type="radio" name="choix_question_2"></div>
+
+		<br/>
+	<p> A quoi peuvent servir les ventilateurs sur les gpu ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Hacher de la viande pour faire des lasagnes <input type="radio" name="choix_question_3"><br/>
+		Refroidir les joueurs qui ont chaud en été<input type="radio" name="choix_question_3"><br/>
+		Refroidir la puce graphique <input type="radio" id="choix_question_3" name="choix_question_3"><br/>
+		Juste pour le style <input type="radio" name="choix_question_3"></div>
+
+
+
+
+	<span id="nvidia_repère"></span>
+	<h1 id="nvidia"> Questions NVIDIA</h1>
+		<!-- input de l'utilisateur qui ne peut saisir qu'un nombre-->
+		<p>Combien de séries RTX sont sorties?</p> <br/>
+		<br/>
+	<div class="Questions">
+		<input type="number" id="question_rtx" name="question_rtx">
+	</div>
+
+	<p> A quoi sert le Ray-Tracing ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Avoir un jeu très beau	<input type="checkbox" id="jeu_beau" name="jeu_beau"><br/>
+		Overclocker sa carte graphique	<input type="checkbox" id="overclock" name="overclock"><br/>
+		Montrer que le jeu-vidéo est un art	<input type="checkbox" id="art" name="art"><br/>
+		Ajouter des effets de lumière	<input type="checkbox" id="lumière" name="choix_vram"><br/>
+		Commander des pizzas <input type="checkbox" id="pizzas" name="pizzas"></div>
+	<br/>
+
+	<p> Quel est l'avantage du DLSS ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Il permet d'obtenir de meilleurs graphismes <input type="radio" name="choix_question_4"><br/>
+		Il permet d'obtenir de meilleures performances<input type="radio" id="choix_question_4" name="choix_question_4"><br/>
+		Il permet d'écrire des pages html <input type="radio" name="choix_question_4"><br/>
+		Il permet de rouler sans permis <input type="radio" name="choix_question_4"></div>
+
+	<span id="amd_repère"></span>
+	<h1 id="amd"> Questions AMD</h1>
+
+	<p> Avec les GPU, quelles est l'autre production majeure d'AMD ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Les cartes mères <input type="radio" name="choix_question_5"><br/>
+		Les ventilateurs<input type="radio" name="choix_question_5"><br/>
+		Les frigidaires <input type="radio" name="choix_question_5"><br/>
+		Les processeurs <input type="radio" id="choix_question_5" name="choix_question_5"></div>
+	
+	<p> Quels sont les points forts du FSR ?</p><br/>
+		<br/>
+		<div class="Questions">
+		On a de meilleurs performances	<input type="checkbox" id="meilleures_performances" name="meilleures_performances"><br/>
+		Il fonctionne sur tout les gpu	<input type="checkbox" id="all_gpu" name="all_gpu"><br/>
+		Il n'as pas besoin de tensor cores	<input type="checkbox" id="tensor_cores" name="tensor_cores"><br/>
+		Il est amélioré constamment, comme le prouve sa version 2.0	<input type="checkbox" id="upgrade" name="upgrade"></div>
+
+	<p> Quelle est la couleur d'AMD ?</p><br/>
+		<br/>
+		<div class="Questions">
+		Rouge, comme le sont les petit pois <input type="radio" id="choix_question_7" name="choix_question_7"><br/>
+		Noir, parce que c'est classe <input type="radio" name="choix_question_7"><br/>
+		Vert, pour narguer NVIDIA <input type="radio" name="choix_question_7"><br/>
+		Bleu, pour marquer la concurrence avec Intel <input type="radio" name="choix_question_7"></div>
+
+	<span id="intel_repère"></span>
+	<h1 id="intel"> Questions INTEL</h1>
+		<!-- input de l'utilisateur qui doit saisir une chaîne de caractère-->
+		<p> Quelle est le nom de la première série de gpu INTEL ?</p><br/>
+		<br/>
+		<div class="Questions">
+		<input type="text" id="question_intel" name="nom_série_intel"></div>
+
+<p> Quels sont les objectifs de deep link ?</p><br/>
+		<br/>
+		<div class="Questions">
+		De meilleurs performances	<input type="checkbox" id="meilleures_performances_intel" name="meilleures_performances_intel"><br/>
+		L'économie d'énergie	<input type="checkbox" id="économie" name="économie"><br/>
+		Une meilleure gestion CPU/GPU	<input type="checkbox" id="gestion" name="gestion"><br/>
+		Trandformer un écran 1080p en écran 8K<input type="checkbox" id="résolution" name="résolution"></div>
+		<br/>
+	<br/>
+
+<p> Quelle élément exclusif est pris en charge par les GPU arc ?</p><br/>
+		<br/>
+		<div id="question_10" class="Questions">
+		VP9, un format d'encodage vidéo <input type="radio" name="choix_question_10"><br/>
+		IPV4, pour booster son ip <input type="radio" name="choix_question_10"><br/>
+		mp3, pour écouter de la musique avec son gpu <input type="radio" name="choix_question_10"><br/>
+		AV1, le dernier format moderne d'encodage vidéo sur internet <input type="radio" id="choix_question_10" name="choix_question_10"></div>
+		<br/>
+
+<!-- titre clickable qui permet de valider les choix de l'utilisateur et d'afficher ses résultats grâce à la fonction validation()-->
+<h1 id="button_valid" onclick="validation()"> Valider </h1>
+<br/>
+<br/>	
+
+<script type="text/javascript">
+	function validation() {
+		var bonne_réponse=0; /* on initialise une variable qui correspond au nombre de bonnes réponses de l'utilisateur. La valeur de celle-ci augmentera au fur et à mesure de la validation des questions */
+		var nombre_questions=12;/* On fixe le nombre total de questions posées*/
+		var nom=document.getElementById('entrée_nom').value;/* récupération du nom de l'utilisateur*/
+		if ((document.getElementById('choix_processeur').checked) && 
+			(document.getElementById('choix_frigo').checked==false)&&
+			(document.getElementById('choix_bios').checked)&&
+			(document.getElementById('choix_vram').checked)&&
+			(document.getElementById('choix_mangue').checked==false)){
+			bonne_réponse+=1;}/* Vérification par conditions qui permet de savoir si les bonnes cases ont été cochées et si les mauvaises ne l'ont pas été. Si tout est bon, on accorde une bonne réponse supplémentaire à l'utilisateur*/
+
+		if ((document.getElementById('jeu_beau').checked) && 
+			(document.getElementById('overclock').checked==false)&&
+			(document.getElementById('art').checked==false)&&
+			(document.getElementById('lumière').checked)&&
+			(document.getElementById('pizzas').checked==false)){
+			bonne_réponse+=1;}
+
+		if ((document.getElementById('meilleures_performances').checked) && 
+			(document.getElementById('all_gpu').checked)&&
+			(document.getElementById('tensor_cores').checked)&&
+			(document.getElementById('upgrade').checked)){
+			bonne_réponse+=1;}
+
+		if ((document.getElementById('meilleures_performances_intel').checked) && 
+			(document.getElementById('économie').checked)&&
+			(document.getElementById('gestion').checked)&&
+			(document.getElementById('résolution').checked==false)){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('question_rtx').value==2)
+			{bonne_réponse+=1;}/* Ici, on vérifie que l'input de l'utilisateur à la question est bien égal à 2*/
+
+		if ((document.getElementById('question_intel').value=="arc")||
+			(document.getElementById('question_intel').value=="Arc")||
+			(document.getElementById('question_intel').value=="ARC")){
+			bonne_réponse+=1;}/* Ici, on vérifie que l'input de l'utilisateur à la question est bien égal à "arc" (on a pris en compte les 3 orthographes possibles du mot)*/
+
+		if (document.getElementById('choix_question_2').checked){
+			bonne_réponse+=1;}/* Avec les boutons radios la vérification est beaucoup plus courte car on a juste à vérifier si la case contenant le choix unique a bien été cochée*/
+
+		if (document.getElementById('choix_question_3').checked){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_4').checked){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_5').checked){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_7').checked){
+			bonne_réponse+=1;}
+
+		if (document.getElementById('choix_question_10').checked){
+			bonne_réponse+=1;}
+
+		var score= (bonne_réponse*100)/nombre_questions;/* On calcule le pourcentage de bonnes réponse de l'utilisateur à l'aide de la règle des produits en croix*/
+
+		alert("Bravo " + nom+ " ! " +"vous avez un score de "+score+ " % !");}
+		/* On affiche à l'utilisateur son résultat à l'aide d'une alerte de la page web personalisée avec son nom rentré et son score*/
+
+
+		
+
+		
+		
+</script>
+	<!--pied de page de la page-->
+	<center><footer> by Tristan Perrot© 2022 </footer></center>
+
+	
+
+</body>
+</html>
