@@ -1,0 +1,209 @@
+ @font-face { font-family: Cyber; src: url('Patrician.ttf'); } /* création de la police de caractère Cyber,
+ utilisable sur toute la page CSS et crée à partir de l'importation de la police 'Patrician.ttf' */
+
+html {
+  scroll-behavior: smooth;/* Permet à l'utilisateur de naviguer avec les liens du menu de navigation par 
+  défilements (ça dépend aussi de la compatibilité  css du navigateur)*/
+}
+
+body{
+	max-width: 1980px;/* permet de conserver une bonne mise à l'échelle du site, que que soit la plateforme 
+	utilisée */
+	min-width: 1200px;
+	background-image: url(a0732f8b3693f76363d6e5307ec43996.jpg) ;/* fond d'écran de la page */
+	background-size: 100%;/* mise à l'échelle du fond d'écran (1080p ici) */
+	background-position: center;/* On centre bien le fond d'écran */
+	background-attachment: fixed;/* On le fixe, pour qu'il ne bouge pas lorsque l'on scrolle */
+	color:  white;/* on définit la couleur principale du texte de la page, le blanc */ 
+	font-family: Cyber;/* on définit la police du texte de la page, qu'on a créé juste au-dessus*/
+}
+
+header{/* on s'occupe ici de l'en-tête de la page */ 
+	background-color: black; 
+  padding: 1% 10%;/* On se permet de modifier ses paddings (bordures) et ses margins (positionnements) 
+  afin d'avoir un bel en-tête cadré avec les bonnes proportions*/
+  padding-top: 9%;
+  padding-bottom: 1.2%;
+  margin-left: -10.5%;
+  margin-top: -10%;
+  text-align: center; /* On centre le titre de l'en-tête */ 
+  font-size: 70%; 
+  position: fixed;/* L'en-tête doit être disponible à n'importe quel endroit de la page, il doit
+  donc être fixe */
+  z-index: 1;/* On défini l'en-tête comme étant de 1er plan, afin qu'il passe au dessus des articles */
+  width: 100%;
+  transition: padding-top 1s, padding-bottom 1s;/* On fixe les durées des transitions qu'on va appliquer à 
+  l'en-tête */
+}
+
+header:hover{/* Lorsque la souris passe sur l'en tête, on aggrandit ses bordures pour l'aggrandir.
+Cet aggrandissement est progressif, grâce aux durées de transitions que l'on a déterminé juste en haut */
+	padding-top: 11%;
+	padding-bottom: 4%;
+}
+
+footer{	/* On s'occupe ici du pied de page */
+	background-color: black; 
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 1%;
+  padding-right: 0.5%;
+  margin-left: -1%;
+  margin-bottom: -1%;
+  text-align: center; 
+  width: 100%;}
+
+h1:not(.banner){/* caractéristiques de tous les titres sauf celui de l'en-tête */
+	padding-top: 25%;
+	padding-bottom: 20%;
+	text-align: center;
+}
+
+h2{	border-radius: 10px  10px 10px 10px;/* on arrondi les côtés des bordures des h2 */
+	transition: color 1s, background-color 1s;
+	padding: 3%;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 10%;
+	text-align: center;
+}
+
+h2:hover{
+	color: black;
+	background-color: rgba(0, 0, 164, 0.8);
+}
+
+p{/* caractéristiques des paragraphes */
+	background-color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+	margin-left: -80%;
+	margin-right: -0.6%;
+	padding-left: 40%;
+	padding-right: -100%;
+	padding-top: 3.5%;
+	padding-bottom: 4%;
+}
+
+
+table{/* caractéristiques du tableau */
+	border: 1px solid white;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+td{/* caractéristiques des colonnes */
+	border: 1px solid white;
+	text-align: center;
+}
+
+a{/* caractéristiques des liens */
+	color: white;
+	text-decoration: none;/* On enlève le soulignage automatique des liens */
+}
+
+ul{background-color: rgba(0, 0, 0, 0.7);/* caractéristiques de la liste*/
+	padding-top: 1%;
+	padding-bottom: 4%;
+	padding-left: 40%;
+	padding-right: -100%;
+	margin-left: -35%;
+	margin-right: -0.6%;
+	margin-top: -1.25%;
+}
+
+li{/* caractéristiques des éléments de la liste */
+	padding-bottom: 5%;
+	padding-top: 2%;
+}
+
+.button_sidebarre{/* caractéristiques des boutons d'ouverture et de fermeture du menu de navigation */
+	background-color: black;
+	color: white;
+	position: fixed;
+	border: solid black 1px;
+	font-size: 300%;
+	z-index: 1;
+	margin-left: -45%;
+}
+
+/* Classes qui vont être employée pour changer la couleur de certains mots */
+.vert{
+	color: green;
+}
+
+.bleu{
+	color: blue;
+}
+
+.rouge{
+	color: red;
+}
+
+#sidebarre{/* caractéristiques du menu de navigation */
+	text-align: center;
+	padding-bottom: 15%;
+	margin-left: -5.5%;
+	padding-top: 5%;
+	padding-left: 8%;
+	padding-right: 3.5%;
+	background-color: rgba(0, 0, 0,0.8);
+	position: fixed;
+}
+
+/* à partir de là, on repositionne les images, les textes et les iframe de la page, grâce aux ID */
+
+#sous-titre{
+	text-align: center;
+	margin-left: -5%;
+	margin-top: 2%;
+}
+#logo_intel{
+	width: 30%;
+	margin-left: 62%;
+	margin-bottom: -17%;
+}
+
+#arc_logo{
+	width: 35%;
+	margin-left: 60%;
+	margin-bottom: -20%;
+}
+
+#laptop_gpu_intel{
+	width: 70%;
+	margin-left: 11.5%;
+}
+
+#dekstop_gpu_intel{
+	width: 70%;
+	margin-left: 11.5%;
+}
+
+#paragraphe_performance{
+	padding-right: -80%;
+	padding-left: 80%;
+}
+#Xess{
+	margin-left: 62%;
+	margin-bottom: -24.5%;
+}
+
+#deep_link_video{
+	margin-left: 62%;
+	margin-bottom: -26%;
+}
+
+#AV1{
+	margin-left: 62%;
+	margin-bottom: -22%;
+}
+
+#paragraphe_av1{
+	padding-top: 6%;
+	padding-bottom: 6%;
+}
+
+
+
+
+
+
